@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .float {
+            width: 50px;
+            height: 50px;
+            margin: 3px;
+            border: 1px solid red;
+            float: left;
+        }
+        .clear {
+            clear: both;
+        }
+        #without-clearfix, #with-clearfix {
+            padding: 5px;
+            background: #ccc;
+        }
+
+        /** HTML5Boilerplate clearfix **/
+        /*
+         * Clearfix: contain floats
+         *
+         * For modern browsers
+         * 1. The space content is one way to avoid an Opera bug when the
+         *    `contenteditable` attribute is included anywhere else in the document.
+         *    Otherwise it causes space to appear at the top and bottom of elements
+         *    that receive the `clearfix` class.
+         * 2. The use of `table` rather than `block` is only necessary if using
+         *    `:before` to contain the top-margins of child elements.
+         */
+
+        .clearfix:before,
+        .clearfix:after {
+            content: " "; /* 1 */
+            display: table; /* 2 */
+        }
+
+        .clearfix:after {
+            clear: both;
+        }
+
+        /*
+         * For IE 6/7 only
+         * Include this rule to trigger hasLayout and contain floats.
+         */
+
+        .clearfix {
+            *zoom: 1;
+        }
+    </style>
+</head>
+<body>
+<h2> with clearfix</h2>
+<p> note that the grey container wraps the elemnts inside, thanks to the clearfix </p>
+<div id='with-clearfix' class='clearfix'>
+    <div class='float'>1</div>
+    <div class='float'>2</div>
+    <div class='float'>3</div>
+    <div class='float clear'>4 clear</div>
+    <div class='float'>5</div>
+    <div class='float'>6</div>
+    <div class='float clear'>7 clear</div>
+</div>
+<hr class='clear'/>
+<h2> without clearfix</h2>
+<p> note that the grey container DOES NOT wrap the elements inside. All it's children are floating, and therefore it does not get any height (the small grey beam is just the padding at work)</p>
+<div id='without-clearfix'>
+    <div class='float'>1</div>
+    <div class='float'>2</div>
+    <div class='float'>3</div>
+    <div class='float clear'>4 clear</div>
+    <div class='float'>5</div>
+    <div class='float'>6</div>
+    <div class='float clear'>7 clear</div>
+</div>
+
+</body>
+</html>

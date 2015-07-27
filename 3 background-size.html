@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        figure{
+            float: left;
+        }
+        div {
+            width:200px;
+            height:400px;
+            margin:10px ;
+            background:url("images/wallpaper.jpg") top center no-repeat red;
+        }
+        .one {
+            background-size:contain;
+        }
+
+        .two {
+            background-size:cover;
+        }
+        .three {
+            background-size:100% 100%;
+        }
+
+    </style>
+</head>
+<body>
+<figure>
+    <div class="one"></div>
+    <figcaption>
+        background-size:contain;
+    </figcaption>
+</figure>
+<figure>
+    <div class="two"></div>
+    <figcaption>
+        background-size:cover;
+    </figcaption>
+</figure>
+<figure>
+    <div class="three"></div>
+    <figcaption>
+        background-size:100% 100%;
+    </figcaption>
+</figure>
+</body>
+</html>

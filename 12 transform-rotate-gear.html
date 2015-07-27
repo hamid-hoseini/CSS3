@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        img{
+            width: 100px;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            function Rotating(){
+                this.d = 0;
+                this.rotate = function (el, dir) {
+                    this.elm = document.getElementById(el);
+                    if(dir ==="forward" ) this.d++; else this.d--;
+                    //this.elm.style.WebkitTransform  = "rotate("+ this.d +"deg)";
+                    //this.elm.style.MozTransform  = "rotate("+ this.d +"deg)";
+                    //this.elm.style.msTransform  = "rotate("+ this.d +"deg)";
+                    //this.elm.style.OTransform  = "rotate("+ this.d +"deg)";
+                    this.elm.style.transform = "rotate("+ this.d +"deg)";
+                    console.log(this.d);
+                    if (this.d == 360 && dir == "forward") {
+                        this.d = 0;
+                    } else{
+                        if (this.d == -360 && dir == "backward"){
+                            this.d = 0;
+                        }
+                    }
+                }
+            }
+            var gear1 = new Rotating();
+            setInterval(gear1.rotate.bind(gear1,"gear1","forward"),20);
+            var gear2 = new Rotating();
+            setInterval(gear2.rotate.bind(gear2,"gear2","backward"),20);
+            var gear3 = new Rotating();
+            setInterval(gear3.rotate.bind(gear3,"gear3","forward"),20);
+
+        })
+    </script>
+</head>
+<body>
+<img id="gear1" src="images/gear.png" alt=""/>
+<img id="gear2" src="images/gear.png" alt=""/>
+<img id="gear3" src="images/gear.png" alt=""/>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        /* CSS3 transitions allows you to change property values smoothly (from one value to another), over a given duration.*/
+        /* 1- property name | duration | timing function | delay */
+        /* 2-
+            transition-delay: 0s
+            transition-duration: 0s
+            transition-property: all
+            transition-timing-function: ease*/
+        /* 3-
+            transition-timing-function: ease;
+            transition-timing-function: ease-in;
+            transition-timing-function: ease-out;
+            transition-timing-function: ease-in-out;
+            transition-timing-function: linear;
+            transition-timing-function: step-start;
+            transition-timing-function: step-end;
+            transition-timing-function: steps(n,end);
+
+            https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function
+        */
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transition: .1s linear .1s;
+        }
+        div:hover{
+            width : 300px;
+            height: 300px;
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div.container{
+            width: 100px;
+            height: 250px;
+            margin: 100px auto;
+            border: 1px solid black;
+            box-shadow: 5px 5px 10px gray;
+            background-color: lightgrey;
+        }
+        div.container > div{
+            width : 70px;
+            height: 70px;
+            margin: 7px auto;
+            border-radius: 50%;
+            border: 1px solid black;
+            opacity: .7;
+        }
+        div.container > #div1,#div3{
+            background-color: yellow;
+            animation: blink1 1s ease infinite;
+        }
+        div.container > #div2{
+            background-color: transparent;
+            animation: blink2 1s ease infinite;
+        }
+        @keyframes blink1 {
+            0%  {background-color: yellow;}
+            50% {background-color: transparent;}
+            100% {background-color: yellow;}
+        }
+        @keyframes blink2 {
+            0%  {background-color: transparent;}
+            50% {background-color: yellow;}
+            100% {background-color: transparent;}
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div{
+            bckgrund-color: red;
+            width: 100px;
+            height: 250px;
+            border : 1px solid red;
+            position: absolute;
+            left: calc(50% - 50px);
+            transform-origin: 50% 100%  ;
+            transition:all 2s ease-in-out;
+        }
+        .swatch-0:hover > .swatch-1{
+            transform: rotate(45deg);
+        }
+        .swatch-0:hover > .swatch-2{
+            transform: rotate(90deg);
+        }
+        .swatch-0:hover > .swatch-3{
+            transform: rotate(135deg);
+        }
+        .swatch-0:hover > .swatch-4{
+            transform: rotate(180deg);
+        }
+        .swatch-0:hover > .swatch-5{
+            transform: rotate(225deg);
+        }
+        .swatch-0:hover > .swatch-6{
+            transform: rotate(270deg);
+        }
+        .swatch-0:hover > .swatch-7{
+            transform: rotate(315deg);
+        }
+    </style>
+</head>
+<body>
+<div class="swatch-0">
+    <div class="swatch-1"></div>
+    <div class="swatch-2"></div>
+    <div class="swatch-3"></div>
+    <div class="swatch-4"></div>
+    <div class="swatch-5"></div>
+    <div class="swatch-6"></div>
+    <div class="swatch-7"></div>
+</div>
+</body>
+</html>

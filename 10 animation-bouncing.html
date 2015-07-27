@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div.container{
+            width:200px;
+            height: 420px;
+            margin: 0 auto;
+
+        }
+        div.apple{
+            position : relative;
+            background: url("images/apple.png") center center no-repeat;
+            width : 200px;
+            height: 302px;
+            top: 0;
+            animation: apple ease 2s infinite;
+        }
+        div.shadow{
+            position: relative;
+            height: 19px;
+            background: #999;
+            opacity: 0.1;
+            border-radius: 100%;
+            margin: 0;
+            top: 100px;
+            animation: shadow ease 2s infinite;
+        }
+        @keyframes apple {
+            50% {top: 100px;}
+            100% {top: 0}
+        }
+        @keyframes shadow {
+            50% {margin: 0 20% 0 20%; opacity: 0.7;}
+            100% {margin: 0; opacity: 0.1;}
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="apple"></div>
+    <div class="shadow"></div>
+</div>
+</body>
+</html>

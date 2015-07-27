@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+
+    <title>Fighting Page Jump</title>
+
+    <link rel='stylesheet' href='css/style.css'>
+
+    <style>
+        * { margin: 0; padding: 0; }
+
+        article, aside, figure, footer, header, hgroup,
+        menu, nav, section { display: block; }
+
+        .page-wrap {
+            width: 300px;
+            margin: 120px auto;
+        }
+
+        body {
+            font: 13px "Lucida Grande", Sans-Serif;
+        }
+
+        h2 {
+            font: bold 30px Sans-Serif;
+        }
+
+        nav {
+            text-align: center;
+            padding: 10px 0;
+            background: black;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            padding: 0 5px;
+        }
+        :target {
+            -webkit-animation: highlight 1s ease ;
+            -moz-animation: highlight 1s ease;
+            -webkit-transform: translateX(20px);
+            -moz-transform: translateX(20px);
+            -ms-transform: translateX(20px);
+            -o-transform: translateX(20px);
+        }
+        @-webkit-keyframes highlight {
+            0% { border-left-color: red; }
+            100% { border-left-color: white;}
+        }
+        @-moz-keyframes highlight {
+            0% { border-left-color: red; }
+            100% { border-left-color: white; }
+        }
+        section > div {
+            border-left: 40px solid white;
+            padding: 10px;
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -ms-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            padding-right: 50px;
+            margin-left: -20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="demo-top-bar">
+
+    <div id="demo-bar-inside">
+
+        <div id="demo-bar-buttons">
+        </div>
+
+    </div>
+
+</div>
+<div class="page-wrap">
+
+    <nav>
+        <a href="#one">1</a>
+        <a href="#two">2</a>
+        <a href="#three">3</a>
+    </nav>
+
+    <section>
+        <div id="one"><h2>One</h2>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</div>
+        <div id="two"><h2>Two</h2>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</div>
+        <div id="three"><h2>Three</h2>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</div>
+    </section>​
+
+</div>
+
+
+
+</body>
+
+</html>

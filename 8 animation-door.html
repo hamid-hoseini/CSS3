@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            text-align: center;
+            padding: 50px;
+        }
+        img{
+            transform: perspective(300px) rotateY(80deg);
+            transform-origin: 0% 0%;
+            animation: door 2s forwards;
+
+        }
+        @keyframes door {
+           0% {
+               transform: perspective(300px) rotateY(80deg);
+               transform-origin: 0% 0%;
+               animation-timing-function: ease-in;
+           }
+            50% {
+                transform: perspective(300px) rotateY(0deg);
+                transform-origin: 0% 0%;
+                animation-timing-function: ease-out;
+            }
+            100% {
+                transform: perspective(300px) rotateY(20deg);
+                transform-origin: 0% 0%;
+                animation-timing-function: ease-out;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<img src="images/door.png" alt=""/>
+</body>
+</html>
